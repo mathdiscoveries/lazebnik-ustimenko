@@ -1,0 +1,52 @@
+{
+  "creators": [
+    {
+      "name": "Hughes, Tyler B.",
+      "orcid": "0000-0001-6221-9014"
+    }
+  ],
+  "title": "Exact Girths of Lazebnik-Ustimenko Graphs D(k, q): Girth 14 for All |F| >= 4, Independent Proof of the Binary Girth Law, and Ternary Girths",
+  "description": "Unconditional Lean 4 + Mathlib formalization (208 audited declarations, zero sorry, zero native_decide, standard axioms only) covering three families of exact girth theorems for the Lazebnik-Ustimenko algebraically defined bipartite graphs D(k, F), separating original results from an independent kernel proof of an earlier binary theorem: (1) Original result: exact girth D(9, F) = girth D(10, F) = 14 for every finite field F with |F| >= 4 in both the working (DS28 Section 6.1) and original minus-sign representations, closing characteristics 2 and 3 (q = 2^m >= 4 and q = 3^m >= 9, left open by Pikuta 2008), closing the empty DS28 Table 7 cells (9, 27), (10, 27), (9, 32), (10, 32), and proving at least two admissible cycle parameters exist whenever |F| >= 4; (2) Independent Lean 4 proof of the earlier complete binary girth law of Cheng, Chen, and Tang (2014) (quoted in Xu, Cheng, and Tang 2023, Example 1): girth D(k, 2) = 2^s for every s >= 3 and every k >= 2 with 2^(s-1) - 4 < k <= 2^s - 4 in both sign models, proved independently via an affine unipotent 4-step operator T4(p) = (I + N)p + b over ZMod 2, and applied (D2_girth_gt_16_of_ge_13) to prove girth D(k, 2) >= 32 with no 16-cycle for every k >= 13, refuting the conflicting printed claim D(k, 2) ~= 2^(k-3) C_16 (k >= 5) in Lazebnik-Sun-Wang (2017) and Lazebnik-Wang DS28 (2026); and (3) Original kernel-verified exact ternary girths D(k, 3) including k = 15, 16 (girth 20), k = 47, 48 (52), k = 55, 56 (60), k = 79, 80 (84), k = 99 (104), and k = 103, 104 (108), together with the unconditional tightening 56 <= girth D(52, 3) <= 60. Companion manuscript and verification archive: https://mathdiscoveries.org/results/lazebnik-ustimenko. Generated and checked by AI research agents built and directed by Tyler B. Hughes. No human mathematician has yet refereed the proof.",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "apache-2.0",
+  "language": "eng",
+  "keywords": [
+    "Lean 4",
+    "formalized mathematics",
+    "theorem proving",
+    "combinatorics",
+    "math.CO",
+    "MSC 2020: 05C38",
+    "MSC 2020: 05C35",
+    "MSC 2020: 05C25"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://mathdiscoveries.org/results/lazebnik-ustimenko",
+      "relation": "isSupplementTo",
+      "resource_type": "other"
+    },
+    {
+      "identifier": "https://doi.org/10.1016/j.disc.2014.07.004",
+      "relation": "references",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "https://doi.org/10.1016/j.ffa.2023.102296",
+      "relation": "references",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "https://doi.org/10.1090/S0273-0979-1995-00569-0",
+      "relation": "references",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "https://doi.org/10.1006/jctb.1995.1033",
+      "relation": "references",
+      "resource_type": "publication-article"
+    }
+  ],
+  "notes": "Unrefereed. Generated and checked by AI research agents built and directed by Tyler B. Hughes."
+}
