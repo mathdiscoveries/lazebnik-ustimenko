@@ -162,14 +162,18 @@ theorem card_admissible_ge_two_of_card_ge_four (F : Type*) [Field F] [Fintype F]
     2 ≤ Nat.card {c : F // Admissible c} := by
   sorry
 
-/-- **Complete Binary Girth Law**: `girth D(k, 2) = 2^s` for every `s ≥ 3` and every `k ≥ 2`
-with `2^(s-1) - 4 < k ≤ 2^s - 4`. -/
+/-- **Independent Lean 4 Proof of the Complete Binary Girth Law** (originally proved by
+Cheng, Chen, and Tang, *Discrete Math.* 335 (2014), 25–34, and quoted in Xu, Cheng, and Tang,
+*Finite Fields Appl.* 92 (2023), 102296, Example 1): `girth D(k, 2) = 2^s` for every `s ≥ 3`
+and every `k ≥ 2` with `2^(s-1) - 4 < k ≤ 2^s - 4`, proved independently here via the affine
+unipotent 4-step operator `T4(p) = (I + N)p + b` over `ZMod 2`. -/
 theorem D2_exact_girth_law {s k : ℕ} (hs : 3 ≤ s) (hk2 : 2 ≤ k)
     (hlo : 2 ^ (s - 1) - 4 < k) (hhi : k ≤ 2 ^ s - 4) :
     HasExactGirth (DGraph k (ZMod 2)) (2 ^ s) := by
   sorry
 
-/-- **Complete Binary Girth Law in the original minus-sign model `DGraphOrig`.** -/
+/-- **Independent Lean 4 Proof of the Cheng–Chen–Tang (2014) Complete Binary Girth Law
+in the original minus-sign model `DGraphOrig`.** -/
 theorem D2_exact_girth_orig_law {s k : ℕ} (hs : 3 ≤ s) (hk2 : 2 ≤ k)
     (hlo : 2 ^ (s - 1) - 4 < k) (hhi : k ≤ 2 ^ s - 4) :
     HasExactGirth (DGraphOrig k (ZMod 2)) (2 ^ s) := by

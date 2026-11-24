@@ -7,16 +7,21 @@ Companion manuscript, interactive Proof Blueprint, and verification archive:
 
 ## Compared Theorems (`Challenge.lean` / `Solution.lean`)
 
-1. `D9_D10_exact_girth_14_all_q_ge_4` — `girth D(9, F) = girth D(10, F) = 14` for every finite field `F` with `|F| ≥ 4` (closing characteristics 2 and 3).
+### Original Results
+1. `D9_D10_exact_girth_14_all_q_ge_4` — `girth D(9, F) = girth D(10, F) = 14` for every finite field `F` with `|F| ≥ 4` (closing characteristics 2 and 3, left open by Pikuta 2008).
 2. `D9_D10_orig_exact_girth_14_all_q_ge_4` — same in the original DS28 minus-sign representation `DGraphOrig`.
 3. `D9_D10_exact_girth_14_galoisField` — direct `GaloisField p n` instantiation for every prime power `p^n ≥ 4`.
 4. `DS28_table7_blank_cells_27_32` — explicit closure of the four empty DS28 Table 7 cells `(9, 27), (10, 27), (9, 32), (10, 32)`.
 5. `card_admissible_ge_two_of_card_ge_four` — at least 2 admissible cycle parameters in every finite field with `|F| ≥ 4`.
-6. `D2_exact_girth_law` — complete binary girth law `girth D(k, 2) = 2^s` for `s ≥ 3` and `2^(s-1) - 4 < k ≤ 2^s - 4`.
-7. `D2_exact_girth_orig_law` — complete binary girth law in `DGraphOrig`.
-8. `D2_girth_gt_16_of_ge_13` — for all `k ≥ 13`, `girth D(k, 2) ≥ 32` and no 16-cycle (refuting the `2^(k-3) C_16` claim).
-9. `D3_exact_girths_highlights` — unconditional kernel-verified ternary girths at `k = 15, 16 (20)`, `47, 48 (52)`, `55, 56 (60)`, `79, 80 (84)`, `99 (104)`, `103, 104 (108)`.
-10. `D3_k52_bounds_56_60` — unconditional tightening `56 ≤ girth D(52, 3) ≤ 60`.
+6. `D3_exact_girths_highlights` — unconditional kernel-verified exact ternary girths at `k = 15, 16 (20)`, `47, 48 (52)`, `55, 56 (60)`, `79, 80 (84)`, `99 (104)`, `103, 104 (108)`.
+7. `D3_k52_bounds_56_60` — unconditional tightening `56 ≤ girth D(52, 3) ≤ 60`.
+
+### Independent Lean 4 Proof of Earlier Binary Girth Law (Cheng–Chen–Tang 2014)
+The complete binary girth formula `girth D(k, 2) = 2^s` for all `k ≥ 2` was originally proved by X. Cheng, W. Chen, and Y. Tang (*Discrete Math.* **335** (2014), 25–34, `doi:10.1016/j.disc.2014.07.004`, Zbl 1298.05227) and quoted in M. Xu, X. Cheng, and Y. Tang (*Finite Fields Appl.* **92** (2023), 102296, Example 1). This repository proves that law independently in Lean 4 via a new affine unipotent 4-step transition operator `T4(p) = (I + N)p + b` over `ZMod 2` in both sign models, and applies it to refute the conflicting survey statement `D(k, 2) ≅ 2^(k-3) C_16` (`k ≥ 5`) in Lazebnik–Sun–Wang (2017) and Lazebnik–Wang DS28 (2026) for every `k ≥ 13`:
+
+8. `D2_exact_girth_law` — independent Lean 4 proof of `girth D(k, 2) = 2^s` for `s ≥ 3` and `2^(s-1) - 4 < k ≤ 2^s - 4`.
+9. `D2_exact_girth_orig_law` — same in `DGraphOrig`.
+10. `D2_girth_gt_16_of_ge_13` — corollary refuting the `2^(k-3) C_16` claim: for all `k ≥ 13`, `girth D(k, 2) ≥ 32` and `D(k, 2)` contains no 16-cycle.
 
 ## Verification
 
