@@ -44,7 +44,7 @@ sources:
     authors:
       - "Tyler B. Hughes"
     id: "https://mathdiscoveries.org/results/lazebnik-ustimenko"
-    type: original-proof
+    type: other
     location: "Companion manuscript (Draft 3), verification archive, and prior-work notes at https://mathdiscoveries.org/results/lazebnik-ustimenko"
     relationship: other
     author_endorsement: participated
