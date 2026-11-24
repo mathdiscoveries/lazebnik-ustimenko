@@ -1,5 +1,7 @@
 # Exact Girths of Lazebnik–Ustimenko Graphs `D(k, q)`: Lean 4 + Mathlib Formalization
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24490751.svg)](https://doi.org/10.5281/zenodo.24490751)
+
 Unconditional Lean 4 (`v4.35.0`) + Mathlib (`v4.35.0`) formalization (208 audited declarations, zero `sorry`, zero `native_decide`, standard axioms `propext`, `Quot.sound`, `Classical.choice` only).
 
 Companion manuscript, interactive Proof Blueprint, and verification archive:
