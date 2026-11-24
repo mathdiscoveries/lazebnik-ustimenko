@@ -1,0 +1,18 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "LazebnikUstimenkoChallenge.D9_D10_exact_girth_14_all_q_ge_4",
+    "LazebnikUstimenkoChallenge.D9_D10_orig_exact_girth_14_all_q_ge_4",
+    "LazebnikUstimenkoChallenge.D9_D10_exact_girth_14_galoisField",
+    "LazebnikUstimenkoChallenge.DS28_table7_blank_cells_27_32",
+    "LazebnikUstimenkoChallenge.card_admissible_ge_two_of_card_ge_four",
+    "LazebnikUstimenkoChallenge.D2_exact_girth_law",
+    "LazebnikUstimenkoChallenge.D2_exact_girth_orig_law",
+    "LazebnikUstimenkoChallenge.D2_girth_gt_16_of_ge_13",
+    "LazebnikUstimenkoChallenge.D3_exact_girths_highlights",
+    "LazebnikUstimenkoChallenge.D3_k52_bounds_56_60"
+  ],
+  "definition_names": [],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"]
+}

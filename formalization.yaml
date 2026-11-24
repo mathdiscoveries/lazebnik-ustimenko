@@ -1,0 +1,185 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: "v0.4"
+
+project:
+  name: "Exact Girths of Lazebnik-Ustimenko Graphs D(k, q): Girth 14 for All |F| >= 4, Binary Girth Law, and Ternary Girths"
+  description: >-
+    Unconditional Lean 4 + Mathlib formalization (208 audited declarations, zero
+    sorry, zero native_decide, standard axioms only) establishing three
+    families of exact girth theorems for the Lazebnik-Ustimenko algebraically
+    defined bipartite graphs D(k, F): (1) girth D(9, F) = girth D(10, F) = 14
+    for every finite field F with |F| >= 4 in both the working (DS28 Section
+    6.1) and original minus-sign representations, closing characteristics 2 and
+    3 (q = 2^m >= 4 and q = 3^m >= 9, left open by Pikuta 2008), closing the
+    empty DS28 Table 7 cells (9, 27), (10, 27), (9, 32), (10, 32), and proving
+    at least two admissible cycle parameters exist whenever |F| >= 4; (2) the
+    complete binary girth law girth D(k, 2) = 2^s for every s >= 3 and every
+    k >= 2 with 2^(s-1) - 4 < k <= 2^s - 4 in both sign models, proving girth
+    D(k, 2) >= 32 with no 16-cycle for every k >= 13 and refuting the
+    published D(k, 2) ~= 2^(k-3) C_16 claim for k >= 5; and (3) unconditional
+    kernel-verified exact ternary girths D(k, 3) including k = 15, 16 (girth
+    20), k = 47, 48 (52), k = 55, 56 (60), k = 79, 80 (84), k = 99 (104), and
+    k = 103, 104 (108), together with the unconditional tightening
+    56 <= girth D(52, 3) <= 60. Companion manuscript and verification archive:
+    https://mathdiscoveries.org/results/lazebnik-ustimenko.
+  authors:
+    - "Tyler B. Hughes"
+  license: "Apache-2.0"
+  responsible_maintainers:
+    - "Tyler B. Hughes"
+
+classification:
+  arxiv: ["math.CO"]
+  msc2020: ["05C38", "05C35", "05C25"]
+
+sources:
+  - title: "Exact Girths of Lazebnik-Ustimenko Graphs D(k, q): Girth 14 Across All Characteristics, Complete Binary Girth Law, and Ternary Girths"
+    authors:
+      - "Tyler B. Hughes"
+    id: "https://mathdiscoveries.org/results/lazebnik-ustimenko"
+    type: original-proof
+    location: "Companion manuscript, verification archive, and prior-work notes at https://mathdiscoveries.org/results/lazebnik-ustimenko"
+    relationship: other
+    author_endorsement: participated
+    note: >-
+      Original constructions, proofs, companion manuscript, and Lean 4 + Mathlib
+      formalization produced by AI research agents built and directed by Tyler
+      B. Hughes. Extends girth D(9, q) = D(10, q) = 14 to all prime powers
+      q >= 4 (closing characteristics 2 and 3), establishes the complete binary
+      girth law girth D(k, 2) = 2^s refuting the 2^(k-3) C_16 claim for k >= 13,
+      and certifies exact ternary girths D(k, 3) including k = 15, 16, 47, 48,
+      55, 56, 79, 80, 99, 103, 104 and 56 <= girth D(52, 3) <= 60. No human
+      mathematician has yet refereed the proof.
+  - title: "A new family of graphs without small cycles"
+    authors:
+      - "Felix Lazebnik"
+      - "Vasiliy A. Ustimenko"
+      - "Andrew J. Woldar"
+    id: "https://doi.org/10.1090/S0273-0979-1995-00569-0"
+    type: paper
+    location: "Bull. Amer. Math. Soc. 32 (1995), 73-78"
+    relationship: background
+    note: "Introduces the graphs D(k, q), proves the classical girth lower bound, and poses the exact-girth conjecture."
+    author_endorsement: not-contacted
+  - title: "On the girth of graphs D(k, q)"
+    authors:
+      - "Zoltan Furedi"
+      - "Felix Lazebnik"
+      - "Akos Seress"
+      - "Vasiliy A. Ustimenko"
+      - "Andrew J. Woldar"
+    id: "https://doi.org/10.1006/jctb.1995.1059"
+    type: paper
+    location: "J. Combin. Theory Ser. B 65 (1995), 255-268"
+    relationship: background
+    note: "Establishes girth lower bounds and exact girths for small dimensions."
+    author_endorsement: not-contacted
+  - title: "On the girth of D(9, q)"
+    authors:
+      - "Piotr Pikuta"
+    type: paper
+    location: "Ann. Univ. Mariae Curie-Sklodowska Sect. A 62 (2008)"
+    relationship: background
+    note: "Proves girth D(9, q) = 14 for finite fields of characteristic greater than 3."
+    author_endorsement: not-contacted
+  - title: "Algebraically Defined Graphs: Survey and Open Problems"
+    authors:
+      - "Felix Lazebnik"
+      - "Shuxing Sun"
+      - "Yingli Wang"
+    type: paper
+    location: "Discrete Math. (2017) and 2026 survey (DS28)"
+    relationship: background
+    note: "States Conjecture 46, Problem 47, Table 4, Table 7, and the k >= 5 binary C_16 claim refuted here for k >= 13."
+    author_endorsement: not-contacted
+
+related_formalizations: []
+
+status:
+  scope: >-
+    Unconditional Lean 4 + Mathlib proof (208 audited declarations in
+    LazebnikUstimenko, zero sorry, zero native_decide, standard axioms only)
+    covering 4 of 5 main results of the companion manuscript (80%): (1) exact
+    girth 14 for D(9, F) and D(10, F) over every finite field with |F| >= 4 in
+    both sign models (including direct GaloisField p n instantiation, DS28
+    Table 7 cells (9, 27), (10, 27), (9, 32), (10, 32), and >= 2 admissible
+    parameters); (2) complete binary girth law girth D(k, 2) = 2^s for all
+    s >= 3 and 2^(s-1) - 4 < k <= 2^s - 4 in both sign models and refutation
+    of the 16-cycle claim for all k >= 13; and (3) unconditional kernel-verified
+    exact ternary girths D(k, 3) at 27 dimensions (highlights at k = 15, 16,
+    47, 48, 55, 56, 79, 80, 99, 103, 104) plus 56 <= girth D(52, 3) <= 60.
+    The 5th result in the companion manuscript (complete ternary girth table
+    for all k <= 50) combines Lean-certified upper-bound cycles with external
+    exhaustive C BFS lower bounds on 17 non-tight dimensions; those conditional
+    BFS-bridge theorems remain in LazebnikUstimenko/CascadeAndDk3.lean and are
+    omitted from the compared unconditional Challenge.lean statements.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: ["propext", "Quot.sound", "Classical.choice"]
+
+automation:
+  methods:
+    - method: agent
+      models: []
+      framework: "AI research agents built and directed by Tyler B. Hughes"
+      tool_setup: >-
+        AI research agents built and directed by Tyler B. Hughes constructed
+        the characteristic-free 14-cycle family, the unipotent binary girth
+        operator, and the kernel-checked ternary walk certificates, and built
+        and verified the Lean 4 + Mathlib formalization.
+      cost:
+        wall_time: "not tracked"
+        spend_usd: "not tracked"
+        hardware: "local machine"
+      prompting_notes: "Goal-directed mathematical discovery and Lean 4 formalization."
+  spend_usd: "not tracked"
+  notes: >-
+    Generated and checked by AI research agents built and directed by Tyler B.
+    Hughes. No human mathematician has yet refereed the proof.
+
+fidelity:
+  divergences: >-
+    The companion manuscript (Draft 3) contains 5 main results. This Palomar
+    submission proves 4 of those 5 unconditionally inside Lean 4 + Mathlib
+    with exact statement fidelity. The 5th result (the complete ternary
+    D(k, 3) girth table for all k <= 50) combines Lean-verified cycle upper
+    bounds with external exhaustive C BFS lower bounds on 17 non-tight
+    dimensions (k in {27..30, 33..34, 36..46}); those conditional BFS-bridge
+    theorems are omitted from Challenge.lean, while all 27 unconditional tight
+    ternary girths (including k = 15, 16, 47, 48, 55, 56, 79, 80, 99, 103, 104)
+    and 56 <= girth D(52, 3) <= 60 stand purely inside the Lean kernel.
+
+review:
+  status: agent-reviewed
+  reviewers:
+    - "AI review agents directed by Tyler B. Hughes"
+  notes: >-
+    Audited by AI review agents for statement fidelity and checked via
+    LazebnikUstimenko/Verify.lean (208 audited declarations, zero sorry, zero
+    native_decide, standard axioms propext, Quot.sound, Classical.choice only).
+    Independent kernel verification is recorded in Palomar's mechanical
+    verification report. No human mathematician has yet refereed the proof.
+
+alignment:
+  namespace: "LazebnikUstimenkoChallenge"
+  theorems:
+    - name: "D9_D10_exact_girth_14_all_q_ge_4"
+      informal: "For every finite field F with |F| >= 4, both D(9, F) and D(10, F) have exact girth 14."
+    - name: "D9_D10_orig_exact_girth_14_all_q_ge_4"
+      informal: "For every finite field F with |F| >= 4, both D(9, F) and D(10, F) in the original minus-sign representation have exact girth 14."
+    - name: "D9_D10_exact_girth_14_galoisField"
+      informal: "For every prime power p^n >= 4 (n != 0), D(9, GF(p^n)) and D(10, GF(p^n)) have exact girth 14."
+    - name: "DS28_table7_blank_cells_27_32"
+      informal: "Closes the four empty DS28 Table 7 cells: D(9, 27), D(10, 27), D(9, 32), and D(10, 32) all have exact girth 14."
+    - name: "card_admissible_ge_two_of_card_ge_four"
+      informal: "Every finite field F with |F| >= 4 has at least two admissible parameters c for the universal 14-cycle family."
+    - name: "D2_exact_girth_law"
+      informal: "Complete binary girth law: girth D(k, 2) = 2^s for every s >= 3 and every k >= 2 with 2^(s-1) - 4 < k <= 2^s - 4."
+    - name: "D2_exact_girth_orig_law"
+      informal: "Complete binary girth law in the original minus-sign representation DGraphOrig."
+    - name: "D2_girth_gt_16_of_ge_13"
+      informal: "For every k >= 13, D(k, 2) has girth at least 32 and contains no 16-cycle, refuting the published 2^(k-3) C_16 claim."
+    - name: "D3_exact_girths_highlights"
+      informal: "Unconditional kernel-verified exact ternary girths: D(15,3)=D(16,3)=20, D(47,3)=D(48,3)=52, D(55,3)=D(56,3)=60, D(79,3)=D(80,3)=84, D(99,3)=104, and D(103,3)=D(104,3)=108."
+    - name: "D3_k52_bounds_56_60"
+      informal: "Unconditional tightening of the first open ternary dimension: 56 <= girth D(52, 3) <= 60."
