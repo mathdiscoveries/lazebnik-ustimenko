@@ -25,6 +25,8 @@ The complete binary girth formula `girth D(k, 2) = 2^s` for all `k ≥ 2` was or
 9. `D2_exact_girth_orig_law` — same in `DGraphOrig`.
 10. `D2_girth_gt_16_of_ge_13` — corollary refuting the `2^(k-3) C_16` claim: for all `k ≥ 13`, `girth D(k, 2) ≥ 32` and `D(k, 2)` contains no 16-cycle.
 
+Coverage by this package's Palomar comparison, against the 5 main results the companion paper counts: 1 is compared in Lean in full (20%; the binary girth law, Proposition 13) and 2 in part (Theorem 5(b), girth 14 in dimensions 9 and 10, for every finite field with at least 4 elements but not for infinite fields; Theorem 11(a), 11 of the 27 exact ternary girths, plus `56 ≤ girth D(52, 3) ≤ 60`). The universal lower bound (Theorem 5(a)) and the other 16 ternary girths are proved in this package's Lean library but not compared; the ternary table through `k = 50` (Theorem 11(b)) combines Lean upper bounds with external search lower bounds and is not compared. Theorems 7 and 9 and Proposition 10 of the paper, outside its count of five, are not proved in this package (it has only Theorem 9's inputs from Theorem 5(b) and Proposition 13); Theorem 5(c), also outside the count, is in the library only as bridges that take the cited lifting theorems as hypotheses.
+
 ## Verification
 
 ```sh
