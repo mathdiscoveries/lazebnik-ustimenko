@@ -29,7 +29,21 @@ project:
     k = 15, 16 (girth 20), k = 47, 48 (52), k = 55, 56 (60), k = 79, 80 (84),
     k = 99 (104), and k = 103, 104 (108), together with the unconditional
     tightening 56 <= girth D(52, 3) <= 60. Companion manuscript and verification
-    archive: https://mathdiscoveries.org/results/lazebnik-ustimenko.
+    archive: https://mathdiscoveries.org/results/lazebnik-ustimenko. Coverage
+    by this package's Palomar comparison, against the 5 main results the
+    companion paper counts: 1 is compared in Lean in full (20%; the binary
+    girth law, Proposition 13) and 2 in part (Theorem 5(b), girth 14 in
+    dimensions 9 and 10, for every finite field with at least 4 elements but
+    not for infinite fields; Theorem 11(a), 11 of the 27 exact ternary girths,
+    plus 56 <= girth D(52, 3) <= 60); the universal lower bound (Theorem
+    5(a)) and the other 16 ternary girths are proved in this package's Lean
+    library but not compared; the ternary table through k = 50 (Theorem
+    11(b)) combines Lean upper bounds with external search lower bounds and is
+    not compared. Theorems 7 and 9 and Proposition 10 of the paper, outside
+    its count of five, are not proved in this package (it has only Theorem
+    9's inputs from Theorem 5(b) and Proposition 13); Theorem 5(c), also
+    outside the count, is in the library only as bridges that take the cited
+    lifting theorems as hypotheses.
   authors:
     - "Tyler B. Hughes"
   license: "Apache-2.0"
@@ -163,7 +177,9 @@ status:
   scope: >-
     Unconditional Lean 4 + Mathlib proof (208 audited declarations in
     LazebnikUstimenko, zero sorry, zero native_decide, standard axioms only)
-    covering 4 of 5 main results of the companion manuscript (80%): (1) the
+    covering in its library 4 of the 5 main results the companion manuscript
+    counts (the Palomar comparison covers 1 in full and 2 in part; see
+    project.description): (1) the
     companion paper's proof of exact girth 14 for D(9, F) and D(10, F) over every finite field
     with |F| >= 4 in both sign models (including direct GaloisField p n
     instantiation, DS28 Table 7 cells (9, 27), (10, 27), (9, 32), (10, 32), and
@@ -208,10 +224,12 @@ automation:
 
 fidelity:
   divergences: >-
-    The companion manuscript (Draft 3) contains 5 main results. This Palomar
-    submission proves 4 of those 5 unconditionally inside Lean 4 + Mathlib
-    with exact statement fidelity (3 results of the companion paper plus that
-    paper's second proof of the earlier binary girth law of Cheng, Chen, and Tang 2014). The
+    The companion manuscript (Draft 3) counts 5 main results. This package's
+    Lean library proves 4 of those 5 (3 results of the companion paper plus
+    that paper's second proof of the earlier binary girth law of Cheng, Chen,
+    and Tang 2014) unconditionally inside Lean 4 + Mathlib, and the Palomar
+    comparison covers 1 of them in full and 2 in part with exact statement
+    fidelity for what it compares. The
     5th result (the complete ternary D(k, 3) girth table for all k <= 50)
     combines Lean-verified cycle upper bounds with external exhaustive C BFS
     lower bounds on 17 non-tight dimensions (k in {27..30, 33..34, 36..46});
