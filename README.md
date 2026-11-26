@@ -9,7 +9,7 @@ Companion manuscript, interactive Proof Blueprint, and verification archive:
 
 ## Compared Theorems (`Challenge.lean` / `Solution.lean`)
 
-### Original Results
+### Results of the Companion Paper
 1. `D9_D10_exact_girth_14_all_q_ge_4` — `girth D(9, F) = girth D(10, F) = 14` for every finite field `F` with `|F| ≥ 4` (closing characteristics 2 and 3, left open by Pikuta 2008).
 2. `D9_D10_orig_exact_girth_14_all_q_ge_4` — same in the original DS28 minus-sign representation `DGraphOrig`.
 3. `D9_D10_exact_girth_14_galoisField` — direct `GaloisField p n` instantiation for every prime power `p^n ≥ 4`.
@@ -18,8 +18,8 @@ Companion manuscript, interactive Proof Blueprint, and verification archive:
 6. `D3_exact_girths_highlights` — unconditional kernel-verified exact ternary girths at `k = 15, 16 (20)`, `47, 48 (52)`, `55, 56 (60)`, `79, 80 (84)`, `99 (104)`, `103, 104 (108)`.
 7. `D3_k52_bounds_56_60` — unconditional tightening `56 ≤ girth D(52, 3) ≤ 60`.
 
-### Independent Lean 4 Proof of Earlier Binary Girth Law (Cheng–Chen–Tang 2014)
-The complete binary girth formula `girth D(k, 2) = 2^s` for all `k ≥ 2` was originally proved by X. Cheng, W. Chen, and Y. Tang (*Discrete Math.* **335** (2014), 25–34, `doi:10.1016/j.disc.2014.07.004`, Zbl 1298.05227) and quoted in M. Xu, X. Cheng, and Y. Tang (*Finite Fields Appl.* **92** (2023), 102296, Example 1). This repository proves that law independently in Lean 4 via a new affine unipotent 4-step transition operator `T4(p) = (I + N)p + b` over `ZMod 2` in both sign models, and applies it to refute the conflicting survey statement `D(k, 2) ≅ 2^(k-3) C_16` (`k ≥ 5`) in Lazebnik–Sun–Wang (2017) and Lazebnik–Wang DS28 (2026) for every `k ≥ 13`:
+### Second Proof of the Earlier Binary Girth Law (Cheng, Chen, and Tang 2014)
+The complete binary girth formula `girth D(k, 2) = 2^s` for all `k ≥ 2` was originally proved by X. Cheng, W. Chen, and Y. Tang (*Discrete Math.* **335** (2014), 25-34, `doi:10.1016/j.disc.2014.07.004`, Zbl 1298.05227) and quoted in M. Xu, X. Cheng, and Y. Tang (*Finite Fields Appl.* **92** (2023), 102296, Example 1). The companion paper (Proposition 13) proves that law a second time via an affine unipotent 4-step transition operator `T4(p) = (I + N)p + b` over `ZMod 2` in both sign models, and this repository formalizes that proof; the paper applies the law to refute the conflicting survey statement `D(k, 2) ≅ 2^(k-3) C_16` (`k ≥ 5`) in Lazebnik-Sun-Wang (2017) and Lazebnik-Wang DS28 (2026) for every `k ≥ 13`:
 
 8. `D2_exact_girth_law` — independent Lean 4 proof of `girth D(k, 2) = 2^s` for `s ≥ 3` and `2^(s-1) - 4 < k ≤ 2^s - 4`.
 9. `D2_exact_girth_orig_law` — same in `DGraphOrig`.
