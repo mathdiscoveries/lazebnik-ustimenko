@@ -46,6 +46,11 @@
       "identifier": "https://doi.org/10.1006/jctb.1995.1033",
       "relation": "references",
       "resource_type": "publication-article"
+    },
+    {
+      "identifier": "https://doi.org/10.37236/14054",
+      "relation": "references",
+      "resource_type": "publication-article"
     }
   ],
   "notes": "Unrefereed. Generated and checked by AI research agents built and directed by Tyler B. Hughes."

@@ -137,8 +137,8 @@ sources:
   - title: "Some families of graphs, hypergraphs and digraphs defined by systems of equations: a survey"
     authors:
       - "Felix Lazebnik"
-      - "Shuxing Sun"
-      - "Yingli Wang"
+      - "Shuying Sun"
+      - "Ye Wang"
     id: "https://bpb-us-w2.wpmucdn.com/sites.udel.edu/dist/3/7714/files/2022/03/Lazebnik_Sun_Wang_12_2016.pdf"
     type: paper
     location: "Lect. Notes Semin. Interdiscip. Mat. 14 (2017), 105-142, Section 6 (Conjecture 5, Problem 8)"
@@ -148,10 +148,10 @@ sources:
   - title: "Some families of graphs, hypergraphs and digraphs defined by triangular systems of polynomial equations"
     authors:
       - "Felix Lazebnik"
-      - "Yingli Wang"
-    id: "https://www.combinatorics.org/ojs/index.php/eljc/article/download/ds28/pdf/"
+      - "Ye Wang"
+    id: "https://doi.org/10.37236/14054"
     type: paper
-    location: "Electron. J. Combin. (2026), Dynamic Survey #DS28, pp. 37, 41-42, and Tables 4 and 7"
+    location: "Electron. J. Combin. (2026), Dynamic Survey #DS28, pp. 37, 41-42, and Tables 4 and 7 (arXiv:2503.07915)"
     relationship: background
     note: "States Conjecture 46, Problem 47, Tables 4 and 7 (including the four empty cells closed here), and repeats the k >= 5 binary C_16 claim refuted for k >= 13 by D2_girth_gt_16_of_ge_13."
     author_endorsement: not-contacted
